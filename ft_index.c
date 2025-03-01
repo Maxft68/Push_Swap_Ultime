@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_index.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 20:02:38 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 15:54:56 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/01 17:55:09 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ void	ft_index(t_list **head)
 {
 	t_list	*current;
 	t_list	*compare;
-
+	
+	if (!head || !*head)
+	{
+		printf("CA DEVRAIT PAS DU TOUT ECHEC FT INDEX");
+		return;
+	}
+	
 	current = *head;
 	while (1)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:22:31 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 20:53:36 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/01 18:23:00 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	ft_lstclear(t_list **lst);
 void	ft_del_one(t_list **head);
 int		ft_lstsize(t_list *list);
 t_list	*ft_lstnew(char *the_value);
-t_list	*ft_lstadd_back(t_list *lst, t_list *new);
+t_list	*ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstadd_front(t_list **lst, t_list *new);
-void	print_list(t_list *head); // inutile a rendre ??
+void	print_list(t_list *head); // inutile a rendre ?? a mettre dans ma libft
 void	swap_a(t_list **stack, int print_sa);
 void	swap_b(t_list **stack, int print_sb);
 void	swap_a_b(t_list **stack_a, t_list **stack_b, int print_ss);
@@ -59,7 +59,10 @@ int		cost_block(t_list **head, int nb);
 int		cost_moves(t_list **head, int target);
 void	big_algo_back_to_head(t_list **head, t_list **head2);
 void	inter_function_big_algo(t_list **head, t_list **head2, int *s);
-void	clear_all(t_list **head, t_list **head2, char **argvsplit);
+void	clear_all(t_list **head, t_list **head2, char **argv);
+void	choose_algo(t_list **head, t_list **head2);
+void	do_node(char **argv, char **argvsplit, t_list **head, t_list **head2);
+void	ddebug_list(t_list *head);
 
 
 #endif

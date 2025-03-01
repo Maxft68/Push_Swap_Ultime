@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 19:30:49 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/18 18:06:55 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/01 16:22:12 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + (s[i] - '0');
 		i++;
 	}
-	return (i);
+	return (result * sign);
 }
