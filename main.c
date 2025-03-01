@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:29:09 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 21:17:16 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/01 12:36:56 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ int main(int argc, char **argv)
 	{
 		new_node = ft_lstnew(argv[i]);
 		if (!new_node)
-		//{ cest bon 
-			// clear_all_all(&head, &head2, argvsplit);
-			// exit(EXIT_FAILURE);
 			return (clear_all(&head, &head2, argvsplit), exit(EXIT_FAILURE), 0);
 		//}
 		head = ft_lstadd_back(head, new_node);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:09:02 by mdsiurds          #+#    #+#             */
-/*   Updated: 2024/11/30 11:27:56 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:05:44 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static int	search_next_sign(char c, va_list lst)
 {
-	int	counter;
-
-	counter = 0;
 	if (c == 'c')
 		return (ft_putchar(va_arg(lst, int)));
 	else if (c == '%')
