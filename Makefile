@@ -6,14 +6,14 @@
 #    By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/17 17:23:35 by mdsiurds          #+#    #+#              #
-#    Updated: 2025/03/01 15:42:44 by maxoph           ###   ########.fr        #
+#    Updated: 2025/03/02 22:31:15 by maxoph           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 SRC = ft_lst.c	sa_sb_ss.c	clear_all.c	main.c	pa_pb.c	ra_rb_rr.c	\
 rra_rrb_rrr.c	control_algo.c	ft_index.c	algo_three.c algo_five.c	\
-cost.c big_algo.c
+cost.c big_algo.c	is_valid.c
 OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 OBJ_DIR = ./temp
 CC = cc

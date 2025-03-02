@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:22:31 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/01 18:23:00 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/02 21:43:57 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,9 @@ void	inter_function_big_algo(t_list **head, t_list **head2, int *s);
 void	clear_all(t_list **head, t_list **head2, char **argv);
 void	choose_algo(t_list **head, t_list **head2);
 void	do_node(char **argv, char **argvsplit, t_list **head, t_list **head2);
-void	ddebug_list(t_list *head);
-
+int		control_all(char **argv);
+int		no_duplicate(char **argv);
+int		is_valid_int(char *s);
+int		is_valid(char *s);
 
 #endif
