@@ -20,10 +20,9 @@ void	ft_index(t_list **head)
 {
 	t_list	*current;
 	t_list	*compare;
-	
+
 	if (!head || !*head)
-		return;
-	
+		return ;
 	current = *head;
 	while (1)
 	{

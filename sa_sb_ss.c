@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sa_sb_ss.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:23:17 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 18:02:47 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:30:06 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ void	swap_a(t_list **stack, int print_sa)
 	else
 	{
 		third = (*stack)->next->next;
-		last = (*stack)->prev; //
+		last = (*stack)->prev;
 		first->next = third;
-		third->prev = first; //
+		third->prev = first;
 		second->next = first;
-		last->next = second; //
-		second->prev = last; //
-		first->prev = second; //
+		last->next = second;
+		second->prev = last;
+		first->prev = second;
 		*stack = second;
 	}
 	if (print_sa)
-		printf("sa\n"); //ajouter mon printf
+		ft_printf("sa\n");
 }
 
 void	swap_b(t_list **stack, int print_sb)
@@ -67,7 +67,7 @@ void	swap_b(t_list **stack, int print_sb)
 		*stack = second;
 	}
 	if (print_sb)
-		printf("sb\n");
+		ft_printf("sb\n");
 }
 
 void	swap_a_b(t_list **stack_a, t_list **stack_b, int print_ss)
@@ -75,5 +75,5 @@ void	swap_a_b(t_list **stack_a, t_list **stack_b, int print_ss)
 	swap_a(stack_a, 0);
 	swap_b(stack_b, 0);
 	if (print_ss)
-		printf("ss\n");
+		ft_printf("ss\n");
 }

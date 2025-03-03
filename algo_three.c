@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 19:33:15 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 15:28:10 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/03 12:59:53 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ void	algo_three(t_list **head)
 	}
 	if ((*head)->index > (*head)->next->index)
 		swap_a(head, 1);
+	return ;
 }

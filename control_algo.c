@@ -19,8 +19,8 @@ Control if all the list is sorted in ascending
 int	control(t_list *head)
 {
 	t_list	*temp;
+
 	temp = head;
-	
 	while (temp->next != head)
 	{
 		if (temp->value > temp->next->value)

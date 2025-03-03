@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:22:31 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/02 21:43:57 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 13:40:22 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include "./libft/libft/libft.h"
+# include "./libft/printf/ft_printf.h"
 
 typedef struct s_list
 {
@@ -34,7 +35,6 @@ int		ft_lstsize(t_list *list);
 t_list	*ft_lstnew(char *the_value);
 t_list	*ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstadd_front(t_list **lst, t_list *new);
-void	print_list(t_list *head); // inutile a rendre ?? a mettre dans ma libft
 void	swap_a(t_list **stack, int print_sa);
 void	swap_b(t_list **stack, int print_sb);
 void	swap_a_b(t_list **stack_a, t_list **stack_b, int print_ss);

@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-void    free_argv(char **argv)
+void	free_argv(char **argv)
 {
-	int    i;
+	int	i;
 
 	if (!argv)
 		return ;
@@ -78,11 +78,11 @@ void	ft_lstclear(t_list **head)
 	*head = NULL;
 }
 
-void clear_all(t_list **head, t_list **head2, char **argv)
+void	clear_all(t_list **head, t_list **head2, char **argv)
 {
 	ft_lstclear(head);
 	ft_lstclear(head2);
 	if (argv)
 		free_argv(argv);
-	return;
+	return ;
 }

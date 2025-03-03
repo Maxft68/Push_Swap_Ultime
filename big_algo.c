@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   big_algo.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 21:16:01 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 19:43:04 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:06:30 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void	big_algo(t_list **head, t_list **head2, int block_size)
 	}
 	if (ft_lstsize(*head) == 3 && control(*head) != 1)
 		algo_three(head);
+	return ;
 }
 
 /*******************************************************************************
@@ -80,21 +81,20 @@ If big-1 is on the head
 *******************************************************************************/
 void	inter_function_big_algo(t_list **head, t_list **head2, int *s)
 {
+	push_a(head2, head, 1);
+	while ((*head2)->index != *s && ft_lstsize(*head2) > 0)
 	{
-		push_a(head2, head, 1);
-		while ((*head2)->index != *s && ft_lstsize(*head2) > 0)
-		{
-			if (cost_index(head2, *s) == 1)
-				rotate_b(head2, 1);
-			else if (cost_index(head2, *s) == 0)
-				reverse_rotate_b(head2, 1);
-			else
-				break ;
-		}
-		push_a(head2, head, 1);
-		swap_a(head, 1);
-		*s = *s - 2;
+		if (cost_index(head2, *s) == 1)
+			rotate_b(head2, 1);
+		else if (cost_index(head2, *s) == 0)
+			reverse_rotate_b(head2, 1);
+		else
+			break ;
 	}
+	push_a(head2, head, 1);
+	swap_a(head, 1);
+	*s = *s - 2;
+	return ;
 }
 
 /*******************************************************************************
@@ -125,4 +125,5 @@ void	big_algo_back_to_head(t_list **head, t_list **head2)
 		else
 			reverse_rotate_b(head2, 1);
 	}
+	return ;
 }

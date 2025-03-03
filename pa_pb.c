@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:42:27 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 15:43:54 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:33:09 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	push_a(t_list **from_b, t_list **to_a, int print_pa)
 	}
 	*to_a = new_a;
 	if (print_pa)
-		printf("pa\n");
+		ft_printf("pa\n");
 }
 
 void	push_b(t_list **from_a, t_list **to_b, int print_pb)
@@ -79,5 +79,5 @@ void	push_b(t_list **from_a, t_list **to_b, int print_pb)
 	}
 	*to_b = new_a;
 	if (print_pb)
-		printf("pb\n");
+		ft_printf("pb\n");
 }

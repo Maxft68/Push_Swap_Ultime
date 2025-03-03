@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:41:30 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/01 18:31:25 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 13:21:50 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,22 +90,4 @@ t_list	*ft_lstadd_front(t_list **lst, t_list *new)
 	(*lst)->prev = new;
 	*lst = new;
 	return (*lst);
-}
-
-void	print_list(t_list *head) // a supr ?
-{
-	t_list	*tmp;
-
-	if (!head)
-		return ;
-	tmp = head;
-	while (1)
-	{
-		printf("contenu = %d; prev = %d; next = %d; index = %d; block = %d\n",
-			tmp->value, tmp->prev->value, tmp->next->value, tmp->index,
-			tmp->block);
-		tmp = tmp->next;
-		if (tmp == head)
-			break ;
-	}
 }

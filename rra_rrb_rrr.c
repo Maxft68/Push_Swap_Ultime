@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rra_rrb_rrr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 22:44:29 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 15:45:21 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:32:22 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	reverse_rotate_a(t_list **stack, int print_rra)
 		return ;
 	*stack = (*stack)->prev;
 	if (print_rra)
-		printf("rra\n");
+		ft_printf("rra\n");
 }
 
 void	reverse_rotate_b(t_list **stack, int print_rrb)
@@ -27,7 +27,7 @@ void	reverse_rotate_b(t_list **stack, int print_rrb)
 		return ;
 	*stack = (*stack)->prev;
 	if (print_rrb)
-		printf("rrb\n");
+		ft_printf("rrb\n");
 }
 
 void	dual_reverse_rotate(t_list **stack_a, t_list **stack_b, int print_rrr)
@@ -37,5 +37,5 @@ void	dual_reverse_rotate(t_list **stack_a, t_list **stack_b, int print_rrr)
 	reverse_rotate_a(stack_a, 0);
 	reverse_rotate_b(stack_b, 0);
 	if (print_rrr)
-		printf("rrr\n");
+		ft_printf("rrr\n");
 }

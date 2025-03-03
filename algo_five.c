@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 23:44:54 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/01 12:46:05 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 13:18:06 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void	algo_five(t_list **head, t_list **head2)
 		algo_three(head);
 	push_a(head2, head, 1);
 	push_a(head2, head, 1);
+	return ;
 }
