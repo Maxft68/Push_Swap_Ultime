@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:29:09 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/03 01:00:01 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 01:57:13 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,14 @@ int main(int argc, char **argv)
 	argvsplit = NULL;
 	if (argc == 1)
 		return(0);
+	if (argc == 2 && argv[1][0] == '\0')
+		return (ft_putstr_fd("Error\n", 2), 0);
 	if (argc == 2)
 	{
 		argvsplit = ft_split(argv[1], ' ');
 		if (!argvsplit || !argvsplit[0] || !control_all(argvsplit))
 			return (clear_all(&head, &head2, argvsplit), exit(EXIT_FAILURE), 0);
-		argv = argvsplit;
-		do_node(argv, argvsplit, &head, &head2);
+		do_node(argvsplit, argvsplit, &head, &head2);
 	}
 	else if (argc > 2)
 	{
@@ -81,6 +82,5 @@ int main(int argc, char **argv)
 			return (clear_all(&head, &head2, argvsplit), exit(EXIT_FAILURE), 0);
 		do_node(argv + 1, argvsplit, &head, &head2);
 	}
-	choose_algo(&head, &head2);
-	return (clear_all(&head, &head2, argvsplit), 0);
+	return (choose_algo(&head, &head2), clear_all(&head, &head2, argvsplit), 0);
 }

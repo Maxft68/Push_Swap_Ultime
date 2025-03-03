@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 19:19:54 by maxoph            #+#    #+#             */
-/*   Updated: 2025/03/03 00:56:18 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 01:25:59 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,18 @@ int is_valid(char *s)
 	
 	i = 0;
 	if (!s || !s[0])
-		return (0);	
+		return (0);
+	while (s[i] && (s[i] == ' ' || (s[i] >= '\t' && s[i] <= '\r')))
+		i++;
 	if (s[i] == '-' || s[i] == '+')
 		i++;
 	if (!s[i])
 		return (0);
 	while (s[i])
 	{
-		if (s[i] < '0' || s[i] > '9')
+		if (s[i] && (s[i] == ' ' || (s[i] >= '\t' && s[i] <= '\r')))
+			i++;
+		else if (s[i] < '0' || s[i] > '9')
 			return (0);
 		i++;
 	}
@@ -48,8 +52,6 @@ int is_valid_int(char *s)
 	}
 	else if (s[i] == '+')
 		i++;
-	if (!s[i])  // Vérifie si la chaîne n'est que "-" ou "+"
-        return (0);
 	while (s[i] >= '0' && s[i] <= '9')
 	{
 		result = result * 10 + (s[i] - '0');
