@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 21:16:01 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/03 13:06:30 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 16:10:10 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void	big_algo(t_list **head, t_list **head2, int block_size)
 /*******************************************************************************
 If big-1 is on the head
 *******************************************************************************/
+
 void	inter_function_big_algo(t_list **head, t_list **head2, int *s)
 {
 	push_a(head2, head, 1);
@@ -100,6 +101,7 @@ void	inter_function_big_algo(t_list **head, t_list **head2, int *s)
 /*******************************************************************************
 Sorts number > 5 - If big or big-1 is better push the better
 *******************************************************************************/
+
 void	big_algo_back_to_head(t_list **head, t_list **head2)
 {
 	t_list	*cur;

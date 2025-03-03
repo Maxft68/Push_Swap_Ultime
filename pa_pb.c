@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:42:27 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/03 13:33:09 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 16:11:10 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	push_a(t_list **from_b, t_list **to_a, int print_pa)
 	*to_a = new_a;
 	if (print_pa)
 		ft_printf("pa\n");
+	return ;
 }
 
 void	push_b(t_list **from_a, t_list **to_b, int print_pb)
@@ -80,4 +81,5 @@ void	push_b(t_list **from_a, t_list **to_b, int print_pb)
 	*to_b = new_a;
 	if (print_pb)
 		ft_printf("pb\n");
+	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:23:17 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/03 13:30:06 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 16:12:38 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,5 @@ void	swap_a_b(t_list **stack_a, t_list **stack_b, int print_ss)
 	swap_b(stack_b, 0);
 	if (print_ss)
 		ft_printf("ss\n");
+	return ;
 }

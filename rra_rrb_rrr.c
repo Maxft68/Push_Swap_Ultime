@@ -6,7 +6,7 @@
 /*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 22:44:29 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/03/03 13:32:22 by maxoph           ###   ########.fr       */
+/*   Updated: 2025/03/03 16:12:08 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	reverse_rotate_a(t_list **stack, int print_rra)
 	*stack = (*stack)->prev;
 	if (print_rra)
 		ft_printf("rra\n");
+	return ;
 }
 
 void	reverse_rotate_b(t_list **stack, int print_rrb)
@@ -28,6 +29,7 @@ void	reverse_rotate_b(t_list **stack, int print_rrb)
 	*stack = (*stack)->prev;
 	if (print_rrb)
 		ft_printf("rrb\n");
+	return ;
 }
 
 void	dual_reverse_rotate(t_list **stack_a, t_list **stack_b, int print_rrr)
@@ -38,4 +40,5 @@ void	dual_reverse_rotate(t_list **stack_a, t_list **stack_b, int print_rrr)
 	reverse_rotate_b(stack_b, 0);
 	if (print_rrr)
 		ft_printf("rrr\n");
+	return ;
 }

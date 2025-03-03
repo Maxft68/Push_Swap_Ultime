@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   clear_all.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdsiurds <mdsiurds@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxoph <maxoph@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 17:23:05 by mdsiurds          #+#    #+#             */
-/*   Updated: 2025/02/28 20:53:23 by mdsiurds         ###   ########.fr       */
+/*   Updated: 2025/03/03 15:31:26 by maxoph           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	free_argv(char **argv)
 	}
 	free(argv);
 	argv = NULL;
+	return ;
 }
 
 void	ft_del_one(t_list **head)
@@ -54,6 +55,7 @@ void	ft_del_one(t_list **head)
 	}
 	free(old_head);
 	old_head = NULL;
+	return ;
 }
 
 void	ft_lstclear(t_list **head)
@@ -76,6 +78,7 @@ void	ft_lstclear(t_list **head)
 		current = tmp;
 	}
 	*head = NULL;
+	return ;
 }
 
 void	clear_all(t_list **head, t_list **head2, char **argv)
